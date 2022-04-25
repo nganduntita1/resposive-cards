@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900");
+:root {
+  --blue: #79a9f5;
+  --indigo: #c45f90;
+  --purple: #a16ae8;
+  --pink: #fc8bc0;
+  --red: #f85c70;
+  --orange: #ff8882;
+  --yellow: #fad02c;
+  --green: #a3c14a;
+  --teal: #20c997;
+  --cyan: #47d8e0;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #ff9a44;
+  --secondary: #6c757d;
+  --success: #a3c14a;
+  --info: #47d8e0;
+  --warning: #fad02c;
+  --danger: #f85c70;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Lato", sans-serif;
+  --font-family-monospace: monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  animation: type 3s steps(22);
+}
+
+a {
+  color: #ff9a44;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #f77100;
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #fff;
+  text-align: left;
+  background-image: radial-gradient(
+    circle,
+    rgb(39, 25, 25),
+    rgb(54, 54, 42),
+    rgb(34, 18, 3)
+  );
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero h1 {
+  width: 100%;
+  color: #222327;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 65px;
+  line-height: 85px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.neon {
+  width: 15px;
+  height: 500px;
+  background: transparent;
+  border-radius: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px 5px #855023, 0 0 10px #f77100, 0 0 40px #f77100,
+    0 0 80px #f77100;
+  animation: run 5s linear infinite;
+}
+
+@keyframes run {
+  0% {
+    left: 10%;
+    opacity: 0;
+  }
+  2% {
+    left: 10%;
+    opacity: 1;
+  }
+  4% {
+    left: 10%;
+    opacity: 0;
+  }
+  6% {
+    left: 10%;
+    opacity: 1;
+  }
+  8% {
+    left: 10%;
+    opacity: 0;
+  }
+  10% {
+    left: 10%;
+    opacity: 1;
+  }
+  100% {
+    left: 90%;
+    opacity: 1;
+  }
+}
+
+.own-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 100px;
+}
+
+.own-card {
+  display: block;
+  object-fit: cover;
+  width: 50%;
+}
+
+.own-container .own-card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  margin: 40px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 3px #f77100;
+}
+
+.own-container .own-card .own-content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 50;
+  transition: 0.5s;
+}
+
+.own-container .own-card:hover .own-content {
+  transform: translateY(20px);
+  opacity: 1;
+}
+
+.own-container .own-card .own-content h2 {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.own-container .own-card .own-content h3::after {
+  font-size: 1.8em;
+  color: #fff;
+  z-index: 1;
+}
+
+.own-container .own-card .own-content p {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.own-container .own-card .own-content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

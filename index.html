@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Cards</title>
+    <link rel="stylesheet" href="cards.css" />
+  </head>
+  <body>
+    <section id="features">
+      <div class="own-container">
+        <div class="neon"></div>
+        <div class="hero">
+          <h1></h1>
+        </div>
+        <div class="own-card">
+          <div class="own-content">
+            <h2>01</h2>
+            <h3>INTELLIGENT CODING</h3>
+            <p>
+              With our forward-thinking approach to development, we create
+              business solutions tailor-made to your specifications. Simply put,
+              we live and breathe the inner workings of your business and its
+              digital platform.
+            </p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="own-card">
+          <div class="own-content">
+            <h2>02</h2>
+            <h3>ROBUST</h3>
+            <p>
+              Our code is robust and carefully tested to ensure quality
+              responsiveness and functionality across multiple browsers and
+              devices.
+            </p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="own-card">
+          <div class="own-content">
+            <h2>03</h2>
+            <h3>POWERFUL</h3>
+            <p>
+              Your customers demand the best, and a strong web presence is an
+              uniquely powerful tool for gaining user confidence and boosting
+              your revenue.
+            </p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Rubic js -->
+
+    <script type="text/javascript" src="animation.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".own-card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+      });
+    </script>
+  </body>
+</html>
